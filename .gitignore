@@ -1,52 +1,29 @@
-# Prerequisites
-*.d
+#include <stdio.h>
+#include <math.h>
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
 
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+int main(){
+	int a, b;
+	float tong, hieu, dientich, chuvi;
+	
+	printf("Nhap he so a: ");
+	scanf("%d", &a);
+	printf("Nhap he so b: ");
+	scanf("%d", &b);
+	
+	
+	
+	tong=a+b;
+	hieu=b-a;
+	dientich=a*b;
+	chuvi=2*(a+b);
+	
+	
+	printf("Tong hai he so la: %.1f", tong);
+	printf("\nHieu hai he so la: %.1f", hieu);
+	printf("\nDien tich hinh chu nhat la: %.1f", dientich);
+	printf("\nChu vi hinh chu nhat la: %.1f", chuvi);
+	
+	
+	return 0;
+}
