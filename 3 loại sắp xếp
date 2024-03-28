@@ -1,0 +1,45 @@
+//sắp xếp chèn;
+void sapXepChen(int a[], int n) {
+	for (int i = 0; i < n; i++) {
+		int j = i;
+		//tăng dần
+		while (j > 0 && a[j] < a[j - 1]) { //giảm dần:while (j > 0 && a[j] > a[j - 1])
+			int temp = a[j];
+			a[j] = a[j - 1];
+			a[j - 1] = temp;
+			j--;
+		}
+	}
+}
+
+
+//sắp xếp nổi bọt;
+void sapXepNoiBot(int a[], int n) {
+	for (int i = 0; i < n - 1; i++) {
+		for (int j = 0; j < n - i - 1; j++) {
+			//tăng dần
+			if (a[j] > a[j + 1]) { //giảm dần: if(a[j] < a[j + 1])
+				int temp = a[j];
+				a[j] = a[j + 1];
+				a[j + 1] = temp;
+
+			}
+		}
+	}
+}
+
+
+//sắp xếp chọn;
+void sapXepChon(int a[], int n)
+{
+	for (int i = 0; i < n - 1; i++) {
+		int min = i;
+		for (int j = i + 1; j < n; j++) {
+			if (a[j] < a[min])//giảm dần thì đổi int max=i; if (a[j] > a[max]) max = j;
+				min = j;
+		}
+		int temp = a[i];
+		a[i] = a[min];
+		a[min] = temp;
+	}
+}
